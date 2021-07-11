@@ -12,9 +12,22 @@ teaser_image: "images/targets.png"
 
 # HTTPS/TLS monitoring
 
-Outages from expired certificates are common occurence on todays internet. Wouldn't it be better to do prevent them, instead of fixing them only after your regular uptime monitoring sounds the alarm? This open-source project can help you prevent such outages.
+Outages from expired certificates are common occurrence on today's internet. Wouldn't it be better to do prevent them, instead of fixing them only after your regular uptime monitoring sounds the alarm? This open-source project can help you prevent such outages.
 
 But it's more than just an certificate expiration monitoring. It also allows you to **monitor how secure is your HTTPS configuration, if any new subdomains appeared for your domains, what certificates are used where, and more**.
+
+---
+
+# Why not just use SSLabs?
+
+SSLabs is incredibly useful, but not a great fit if you need to:
+
+- scan services that are in internal network (i.e. not on internet)
+- scan a server running on specific IP (for specific hostname), that's not yet propagated through DNS (for example a stage server)
+- scan many different domains (scanning is rate limited)
+- scan regularly as part of monitoring (and get notifications before problems like certificate expiration occur)
+
+TLSInventory can help you with all of the above - either directly using the publicly available instance, or you can self-host the app.
 
 ---
 
@@ -26,3 +39,9 @@ This whole project is open-source with MIT license. It's comprised of multiple p
 - [Frontend](https://github.com/TLSInventory/frontend) - web interface which consumes the API provided by backend.
 
 and multiple few utilities, which are all tied together using Docker containers. For quickstart checkout the [Docker repository](https://github.com/TLSInventory/docker) and also take a look to the Readme in backends repository.
+
+# What's the current state of the project?
+
+We're still in **Beta** and probably still will be for quite some time, because the scope is quite big. That being said it, lot of the functionality is already implemented and can bring you some benefit, though we suggest that you don't rely on it as the only source of alert in your monitoring stack.
+
+For more information check the ReadMe.md in [repository of backend](https://github.com/TLSInventory/backend).
