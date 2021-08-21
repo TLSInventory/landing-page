@@ -16,6 +16,8 @@ jobs:
       -
         name: Checkout
         uses: actions/checkout@v2
+        with:
+          submodules: 'recursive'
 
       - name: Print debug info
         run: echo ${{ github.ref }} ${{ env.image_tag }}
