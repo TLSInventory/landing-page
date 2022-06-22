@@ -10,6 +10,12 @@ header_button_more:
 teaser_image: "images/targets.png"
 ---
 
+{{< rawhtml >}}
+<div class="alert-warning">
+  This project is no longer actively developed and the public instance was stopped. For source code check the GitHub repositories linked above.
+</div>
+{{< /rawhtml >}}
+
 # HTTPS/TLS monitoring
 
 Outages from expired certificates are common occurrence on today's internet. Wouldn't it be better to do prevent them, instead of fixing them only after your regular uptime monitoring sounds the alarm? This open-source project can help you prevent such outages.
@@ -43,5 +49,7 @@ and multiple few utilities, which are all tied together using Docker containers.
 # What's the current state of the project?
 
 We're still in **Beta** and probably still will be for quite some time, because the scope is quite big. That being said it, lot of the functionality is already implemented and can bring you some benefit, though we suggest that you don't rely on it as the only source of alert in your monitoring stack.
+
+**Update**: This project is no longer actively developed.
 
 For more information check the ReadMe.md in [repository of backend](https://github.com/TLSInventory/backend).
